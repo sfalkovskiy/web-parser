@@ -32,7 +32,7 @@ const chooseSplit = (dates) => {
 
   splitDates = [dates, dates];
 
-  return getDates(splitDates, false);
+  return getDates(splitDates);
 };
 
 export default chooseSplit;
