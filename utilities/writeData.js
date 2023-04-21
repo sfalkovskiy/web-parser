@@ -13,10 +13,22 @@ const writeData = (tourData) => {
     availability: tour.availability,
   }));
 
+  const rows = [
+    ...recordData.map((tour) => {
+      const joinedItems = [];
+      for (const key in tour) {
+        if (Object.prototype.hasOwnProperty.call(tour, key)) {
+          joinedItems.push(Array.isArray(tour[key]) ? tour[key].join() : tour[key]);
+        }
+      }
+      return joinedItems;
+    }),
+
+  ];
+
   return [
     HEADING_ITEMS,
-    ...recordData.map((tour) => Object.values(tour)
-      .map((tourItem) => (Array.isArray(tourItem) ? tourItem.join() : tourItem))),
+    ...rows,
   ];
 };
 

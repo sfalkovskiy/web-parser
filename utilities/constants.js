@@ -45,3 +45,5 @@ export const MONTHS = {
   ноябр: 11,
   декабр: 12,
 };
+
+export const MONTHS_KEYS = Object.keys(MONTHS);

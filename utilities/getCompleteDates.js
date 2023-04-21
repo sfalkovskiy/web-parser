@@ -1,9 +1,8 @@
-import getDates from './getDates.js';
+import chooseSplit from './chooseSplit.js';
 
-const getComleteDates = (dates) => {
-  const datesLowerCase = dates.map((date) => date.toLowerCase());
-
-  return datesLowerCase.map((date) => getDates(date));
-};
+const getComleteDates = (dates) => dates.map((date) => {
+  const lowerCaseDates = date.toLowerCase();
+  return chooseSplit(lowerCaseDates);
+});
 
 export default getComleteDates;

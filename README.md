@@ -4,8 +4,14 @@
 
 ## Установка
 
-1. Склонируйте репозиторий: git clone https://github.com/your-username/your-repo.git
-2. Перейдите в папку проекта: cd your-repo
+1. Склонируйте репозиторий:
+```bash
+$ git clone https://github.com/sfalkovskiy/web-parser
+``` 
+2. Перейдите в папку проекта:
+```bash
+$ cd web-parser
+```  
 3. Установите зависимости: 
 
 ```bash

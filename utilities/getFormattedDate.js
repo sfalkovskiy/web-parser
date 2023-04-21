@@ -1,17 +1,8 @@
-import { FORMAT_DATE } from './constants.js';
+import getFormatItem from './getFormatItem.js';
 
 const getFormattedDate = (startDay, endDay, startMonth, endMonth, startYear, endYear) => {
-  const formattedStartDate = `${startDay < 10
-    ? FORMAT_DATE.ZERO
-    : FORMAT_DATE.NOTHING}${startDay}.${startMonth < 10
-    ? FORMAT_DATE.ZERO
-    : FORMAT_DATE.NOTHING}${startMonth}.${startYear}`;
-
-  const formattedEndDate = `${endDay < 10
-    ? FORMAT_DATE.ZERO
-    : FORMAT_DATE.NOTHING}${endDay}.${endMonth < 10
-    ? FORMAT_DATE.ZERO
-    : FORMAT_DATE.NOTHING}${endMonth}.${endYear}`;
+  const formattedStartDate = `${getFormatItem(startDay)}.${getFormatItem(startMonth)}.${startYear}`;
+  const formattedEndDate = `${getFormatItem(endDay)}.${getFormatItem(endMonth)}.${endYear}`;
 
   return { formattedStartDate, formattedEndDate };
 };
